@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controller.RegistrationController"
-            prefHeight="400.0" prefWidth="600.0"
-            minWidth="400" minHeight="400">
+            prefHeight="500.0" prefWidth="600.0"
+            minWidth="400" minHeight="500">
 
     <children>
         <VBox alignment="CENTER" spacing="15"
@@ -24,16 +28,28 @@
                        maxWidth="300"/>
             <Label fx:id="nameErrorLabel" text="" style="-fx-text-fill: red;"/>
 
+            <TextField fx:id="surnameField" promptText="Surname" styleClass="form-control"
+                       maxWidth="300"/>
+            <Label fx:id="surnameErrorLabel" text="" style="-fx-text-fill: red;"/>
+
+            <DatePicker fx:id="birthdateField" promptText="Birthdate" styleClass="form-control"
+                        maxWidth="300"/>
+            <Label fx:id="birthdateErrorLabel" text="" style="-fx-text-fill: red;"/>
+
             <TextField fx:id="emailField" promptText="Email" styleClass="form-control"
                        maxWidth="300"/>
             <Label fx:id="emailErrorLabel" text="" style="-fx-text-fill: red;"/>
+
+            <TextField fx:id="avatarField" promptText="Avatar URL" styleClass="form-control"
+                       maxWidth="300"/>
+            <Label fx:id="avatarErrorLabel" text="" style="-fx-text-fill: red;"/>
 
             <PasswordField fx:id="passwordField" promptText="Password"
                            styleClass="form-control" maxWidth="300"/>
             <Label fx:id="passwordErrorLabel" text="" style="-fx-text-fill: red;"/>
 
-            <Button text="Register" onAction="#handleRegistration"
-                    styleClass="btn btn-primary" maxWidth="300"/>
+            <Button text="Register" fx:id="registerButton" onAction="#handleRegistration"
+                    styleClass="btn btn-primary"/>
         </VBox>
     </children>
 </AnchorPane>

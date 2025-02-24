@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400" prefWidth="500" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MoodController">
+
+<children>
+<VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+    <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Registro de Estado de Ánimo" />
+    <TextArea fx:id="notesField" maxWidth="350" prefRowCount="4" promptText="Escribe tus notas aquí..." style="-fx-font-size: 14px;" wrapText="true" />
+    <ComboBox fx:id="moodComboBox" maxWidth="350" promptText="Selecciona tu estado de ánimo" style="-fx-font-size: 14px;" />
+    <Button maxWidth="350" onAction="#handleMoodSubmission" style="-fx-font-size: 14px; -fx-padding: 8 20;" styleClass="btn-primary" text="Guardar Estado" />
+</VBox>
+</children>
+        </AnchorPane>
