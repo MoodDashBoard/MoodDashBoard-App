@@ -98,8 +98,10 @@ public class RegistrationController {
                 surnameErrorLabel
         );
 
-        if (isRegistered) {
-            openMoodPanel(newUser);
+        User userLoged = userService.login(newUser.getEmail(), newUser.getPassword());
+
+        if (isRegistered && userLoged != null) {
+            openMoodPanel(userLoged);
             Stage currentStage = (Stage) registerButton.getScene().getWindow();
             currentStage.close();
         }
