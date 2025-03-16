@@ -6,50 +6,50 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller.RegistrationController"
-            prefHeight="500.0" prefWidth="600.0"
-            minWidth="400" minHeight="500">
+<StackPane xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.RegistrationController"
+           stylesheets="@../view/css/registration.css"
+           prefHeight="500.0" prefWidth="600.0">
 
-    <children>
-        <VBox alignment="CENTER" spacing="15"
-              style="-fx-padding: 20 20 20 20;"
-              AnchorPane.topAnchor="0"
-              AnchorPane.bottomAnchor="0"
-              AnchorPane.leftAnchor="0"
-              AnchorPane.rightAnchor="0">
+        <Pane
+        StackPane.alignment="CENTER">
+        <StackPane.alignment>CENTER</StackPane.alignment>
+</Pane>
 
-            <Label text="User Registration" styleClass="header"
-                   style="-fx-font-size: 24px; -fx-font-weight: bold;"
-                   minWidth="-Infinity" maxWidth="Infinity"/>
+<VBox alignment="CENTER" spacing="15"
+      styleClass="vbox"
+      StackPane.alignment="CENTER">
+<Label alignment="CENTER" text="Registro de Usuario" styleClass="header"
+       minWidth="-Infinity" maxWidth="Infinity"/>
 
-            <TextField fx:id="nameField" promptText="Name" styleClass="form-control"
-                       maxWidth="300"/>
-            <Label fx:id="nameErrorLabel" text="" style="-fx-text-fill: red;"/>
+<TextField fx:id="nameField" promptText="Nombre" styleClass="form-control"
+           maxWidth="300"/>
+<Label fx:id="nameErrorLabel" text="" styleClass="error-label"/>
 
-            <TextField fx:id="surnameField" promptText="Surname" styleClass="form-control"
-                       maxWidth="300"/>
-            <Label fx:id="surnameErrorLabel" text="" style="-fx-text-fill: red;"/>
+<TextField fx:id="surnameField" promptText="Apellidos" styleClass="form-control"
+           maxWidth="300"/>
+<Label fx:id="surnameErrorLabel" text="" styleClass="error-label"/>
 
-            <DatePicker fx:id="birthdateField" promptText="Birthdate" styleClass="form-control"
-                        maxWidth="300"/>
-            <Label fx:id="birthdateErrorLabel" text="" style="-fx-text-fill: red;"/>
+<DatePicker fx:id="birthdateField" promptText="Fecha de Nacimiento" styleClass="form-control"
+            maxWidth="300"/>
+<Label fx:id="birthdateErrorLabel" text="" styleClass="error-label"/>
 
-            <TextField fx:id="emailField" promptText="Email" styleClass="form-control"
-                       maxWidth="300"/>
-            <Label fx:id="emailErrorLabel" text="" style="-fx-text-fill: red;"/>
+<TextField fx:id="emailField" promptText="Correo Electrónico" styleClass="form-control"
+           maxWidth="300"/>
+<Label fx:id="emailErrorLabel" text="" styleClass="error-label"/>
 
-            <TextField fx:id="avatarField" promptText="Avatar URL" styleClass="form-control"
-                       maxWidth="300"/>
-            <Label fx:id="avatarErrorLabel" text="" style="-fx-text-fill: red;"/>
+<!--
+<TextField fx:id="avatarField" promptText="URL del Avatar" styleClass="form-control"
+           maxWidth="300"/>
+<Label fx:id="avatarErrorLabel" text="" styleClass="error-label"/>
+-->
 
-            <PasswordField fx:id="passwordField" promptText="Password"
-                           styleClass="form-control" maxWidth="300"/>
-            <Label fx:id="passwordErrorLabel" text="" style="-fx-text-fill: red;"/>
+<PasswordField fx:id="passwordField" promptText="Contraseña"
+               styleClass="form-control" maxWidth="300"/>
+<Label fx:id="passwordErrorLabel" text="" styleClass="error-label"/>
 
-            <Button text="Register" fx:id="registerButton" onAction="#handleRegistration"
-                    styleClass="btn btn-primary"/>
-        </VBox>
-    </children>
-</AnchorPane>
+<Button text="Registrarse" fx:id="registerButton" onAction="#handleRegistration"
+        styleClass="btn-primary" maxWidth="300"/>
+</VBox>
+        </StackPane>

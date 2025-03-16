@@ -41,7 +41,7 @@ public class MongoDBService {
                     .build();
 
             mongoClient = MongoClients.create(settings);
-            database = mongoClient.getDatabase("MoodDashBoard");
+            database = mongoClient.getDatabase("mooddashboard");
         }
         return database;
     }

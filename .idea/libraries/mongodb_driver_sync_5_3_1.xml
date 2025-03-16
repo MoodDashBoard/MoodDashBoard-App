@@ -17,6 +17,8 @@
       <root url="jar://$PROJECT_DIR$/library/mongodb-driver-core-5.3.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/library/jbcrypt-0.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/library/slf4j-simple-2.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/fontbox-3.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/pdfbox-app-3.0.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

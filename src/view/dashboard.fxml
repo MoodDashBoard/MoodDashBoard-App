@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.DashboardController"
+            stylesheets="@../view/css/dashboard.css"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <top>
+        <HBox fx:id="topBar" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #1e1e1e;">
+            <Button fx:id="moodFormButton" onAction="#loadMoodForm" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitWidth="24" fitHeight="24" smooth="true" preserveRatio="true">
+                        <Image url="@../view/icons/smile.png"/>
+                    </ImageView>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Registrar Estado de Ánimo" />
+                </tooltip>
+            </Button>
+
+            <Button fx:id="moodRecordsButton" onAction="#loadMoodRecordsForm" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitWidth="24" fitHeight="24" smooth="true" preserveRatio="true">
+                        <Image url="@../view/icons/history.png"/>
+                    </ImageView>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Ver Historial" />
+                </tooltip>
+            </Button>
+
+            <Button fx:id="moodChartButton" onAction="#loadMoodChart" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitWidth="24" fitHeight="24" smooth="true" preserveRatio="true">
+                        <Image url="@../view/icons/graphic.png" />
+                    </ImageView>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Ver Gráfico" />
+                </tooltip>
+            </Button>
+
+            <Button fx:id="averageMoodButton" onAction="#showAverageMood" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitWidth="24" fitHeight="24" smooth="true" preserveRatio="true">
+                        <Image url="@../view/icons/percentage.png" />
+                    </ImageView>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Ver Media de Estados de Ánimo" />
+                </tooltip>
+            </Button>
+
+            <Button fx:id="generatePdfButton" onAction="#generatePdf" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitWidth="24" fitHeight="24" smooth="true" preserveRatio="true">
+                        <Image url="@../view/icons/pdf.png"/>
+                    </ImageView>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Generar PDF del Historial" />
+                </tooltip>
+            </Button>
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 10;">
+            <Label styleClass="footer" text="© 2025 Mood Dashboard"/>
+        </HBox>
+    </bottom>
+</BorderPane>
