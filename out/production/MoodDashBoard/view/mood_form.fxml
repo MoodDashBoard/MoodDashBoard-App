@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.MoodController"
+           stylesheets="@../view/css/mood_form.css"
+           prefHeight="400.0" prefWidth="500.0">
+
+    <Pane
+          StackPane.alignment="CENTER">
+        <StackPane.alignment>CENTER</StackPane.alignment>
+    </Pane>
+
+    <VBox alignment="CENTER" spacing="20"
+          styleClass="vbox"
+          StackPane.alignment="CENTER">
+        <Label alignment="CENTER" text="Registro de Estado de Ánimo" styleClass="header"
+               minWidth="-Infinity" maxWidth="Infinity"/>
+
+        <TextArea  fx:id="notesField" maxWidth="350" prefRowCount="4"
+                  promptText="Escribe tus notas aquí..." styleClass="text-area"
+                  wrapText="true"/>
+        <ComboBox fx:id="moodComboBox" maxWidth="350"
+                  promptText="Selecciona tu estado de ánimo" styleClass="combo-box"/>
+
+        <Button text="Guardar Estado" onAction="#handleMoodSubmission"
+                styleClass="btn-primary" maxWidth="350"/>
+    </VBox>
+</StackPane>

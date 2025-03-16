@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="mongodb-driver-sync-5.3.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library/mongodb-driver-sync-5.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/bootstrapfx-core-0.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/controlsfx-11.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/bson-5.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/slf4j-api-2.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/mongodb-driver-core-5.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/jbcrypt-0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/slf4j-simple-2.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/fontbox-3.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/pdfbox-app-3.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
