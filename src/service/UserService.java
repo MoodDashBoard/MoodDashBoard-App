@@ -9,13 +9,26 @@ import model.MoodEntry;
 import model.Enums.MoodState;
 import org.bson.types.ObjectId;
 import org.mindrot.jbcrypt.BCrypt;
-
+import org.bson.Document;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 public class UserService {
     private MongoCollection<User> getUsersCollection() {
         return MongoDBService.getDatabase().getCollection("users", User.class);
+    }
+
+    public List<String> getRecommendationsByMoodState(String moodState) {
+        MongoCollection<Document> collection = MongoDBService.getDatabase().getCollection("recomendations");
+        Document query = new Document("moodState", moodState);
+        Document result = collection.find(query).first();
+
+        if (result != null) {
+            return result.getList("recommendations", String.class);
+        }
+        return Collections.emptyList();
     }
 
     public boolean registerUser(String name, String surname, Date birthdate, String email,
@@ -109,5 +122,11 @@ public class UserService {
         for (Label label : labels) {
             label.setText("");
         }
+    }
+
+    public List<MoodEntry> getMoodEntries(ObjectId userId) {
+        MongoCollection<User> usersCollection = getUsersCollection();
+        User user = usersCollection.find(Filters.eq("_id", userId)).first();
+        return user != null ? user.getRecords() : new ArrayList<>();
     }
 }
